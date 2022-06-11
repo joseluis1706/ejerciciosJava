@@ -1,10 +1,12 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class rifa {
     public static void main(String[] args){
+        Random random = new Random();
         int limiteInferior = 0;
         int limiteSuperior = 20;
-        int numeroGanador = 12;
+        int numeroGanador = random.nextInt(limiteSuperior);
         int numeroJugador; //Se declara pero no se inicializa
         int numeroIntentos = 1;
 
@@ -38,7 +40,7 @@ public class rifa {
             }
 
         }
-        System.out.println("Ganaste!, Adivinaste en " + numeroIntentos);
+        System.out.println("Ganaste!, Adivinaste en " + numeroIntentos + " intentos.");
         sc.close();       
     }
 }
